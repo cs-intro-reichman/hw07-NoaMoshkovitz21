@@ -43,9 +43,9 @@ public class Koch {
 	double segBX = x1 + 2 * segX;
 	double segBY = y1 + 2 * segY;
 
-	double peakX = (0.5 * (x1 + x2)) + (Math.sqrt(3) / 6.0 * (y2 - y1));
-	double peakY = (0.5 * (y1 + y2)) + (Math.sqrt(3) / 6.0 * (x1 - x2));
-
+	double peakX = (0.5 * (x1 + x2)) - (Math.sqrt(3) / 6.0 * (y2 - y1));
+    double peakY = (0.5 * (y1 + y2)) + (Math.sqrt(3) / 6.0 * (x2 - x1));
+	
 	curve(n - 1, x1, y1, segAX, segAY); // Segment 1
 	curve(n - 1, segAX, segAY, peakX, peakY); // Segment 2
 	curve(n - 1, peakX, peakY, segBX, segBY); // Segment 3
